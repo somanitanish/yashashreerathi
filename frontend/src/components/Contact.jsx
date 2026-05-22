@@ -58,7 +58,7 @@ export default function Contact() {
 
           <h2
             className="font-display mt-6 md:mt-8 mx-auto"
-            style={{ fontSize: "clamp(2.6rem, 8vw, 6.5rem)", lineHeight: 0.95 }}
+            style={{ fontSize: "clamp(2rem, 9vw, 6.5rem)", lineHeight: 0.98 }}
             data-testid="contact-heading"
           >
             <span className="block">READY TO</span>

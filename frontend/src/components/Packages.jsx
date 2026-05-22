@@ -82,7 +82,7 @@ export default function Packages() {
         </p>
         <h2
           className="font-display mt-5 md:mt-6"
-          style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
+          style={{ fontSize: "clamp(1.9rem, 6.5vw, 5rem)" }}
           data-testid="packages-heading"
         >
           PICK YOUR DISTRIBUTION.

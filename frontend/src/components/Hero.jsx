@@ -62,7 +62,7 @@ export default function Hero() {
             <h1
               data-testid="hero-name"
               className="font-display fade-up delay-1 mt-6 md:mt-8"
-              style={{ fontSize: "clamp(2.6rem, 8.5vw, 5rem)" }}
+              style={{ fontSize: "clamp(2.2rem, 9vw, 5rem)" }}
             >
               <span style={{ display: "block", color: "var(--ink)" }}>YASHASHREE</span>
               <span style={{ display: "block", color: "var(--pink)" }}>RATHI</span>
@@ -111,7 +111,7 @@ export default function Hero() {
                 suffix="K+"
                 format="comma"
                 className="font-display mt-3 md:mt-4 block"
-                style={{ fontSize: "clamp(3.5rem, 10vw, 7rem)", color: "var(--pink)" }}
+                style={{ fontSize: "clamp(2.8rem, 11vw, 7rem)", color: "var(--pink)" }}
                 testId="total-reach-value"
               />
               <div className="flex flex-wrap gap-2 mt-5 md:mt-6">

@@ -53,7 +53,7 @@ export default function WhyMe() {
         </p>
         <h2
           className="font-display mt-5 md:mt-6"
-          style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
+          style={{ fontSize: "clamp(1.8rem, 7vw, 5rem)" }}
           data-testid="why-heading"
         >
           CREATOR OPERATOR.
