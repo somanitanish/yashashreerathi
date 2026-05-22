@@ -1,6 +1,5 @@
 import React from "react";
 import { Mail, Instagram, Newspaper } from "lucide-react";
-import LeadForm from "@/components/LeadForm";
 
 const channels = [
   {
@@ -20,7 +19,7 @@ const channels = [
   {
     Icon: Newspaper,
     label: "NEWSLETTER",
-    value: "She Creates (Beehiiv)",
+    value: "She Creates",
     href: "https://beacons.ai/shecreatescommunity",
     testId: "contact-newsletter",
   },
@@ -98,13 +97,8 @@ export default function Contact() {
             product belongs in their workflow — let's make sure they find it.
           </p>
 
-          {/* Lead-capture form */}
-          <div className="mt-10 md:mt-14">
-            <LeadForm />
-          </div>
-
           {/* Channel cards */}
-          <div className="grid sm:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-14 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-3 gap-4 md:gap-5 mt-12 md:mt-16 max-w-4xl mx-auto">
             {channels.map(({ Icon, label, value, href, testId }) => (
               <a
                 key={label}
