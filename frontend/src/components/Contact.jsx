@@ -51,8 +51,8 @@ export default function Contact() {
         </p>
 
         <h2
-          className="font-display mt-6"
-          style={{ fontSize: "clamp(2.8rem, 7vw, 6rem)" }}
+          className="font-display mt-5 md:mt-6"
+          style={{ fontSize: "clamp(2.4rem, 7vw, 6rem)" }}
           data-testid="contact-heading"
         >
           READY TO
@@ -62,12 +62,12 @@ export default function Contact() {
           <span style={{ color: "var(--pink)" }}>RIGHT PEOPLE?</span>
         </h2>
 
-        <p className="mt-10 max-w-2xl" style={{ color: "#B9B9C0", fontSize: "1.05rem", lineHeight: 1.7 }}>
+        <p className="mt-8 md:mt-10 max-w-2xl text-sm md:text-base" style={{ color: "#B9B9C0", lineHeight: 1.7 }}>
           My audience is actively building, learning, and buying. If your product
           belongs in their workflow — let's make sure they find it.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-5 mt-14">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-14">
           {channels.map(({ Icon, label, value, href, testId }) => (
             <a
               key={label}
@@ -75,7 +75,7 @@ export default function Contact() {
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group card-hover rounded-2xl p-7 flex flex-col gap-4"
+              className="group card-hover rounded-2xl p-5 md:p-7 flex flex-col gap-4"
               style={{ background: "#1A1A1D", border: "1px solid #26262A" }}
             >
               <div className="flex items-center justify-between">
@@ -95,7 +95,7 @@ export default function Contact() {
                 <p className="uppercase tracking-widest text-xs font-semibold" style={{ color: "#9D9DA5" }}>
                   {label}
                 </p>
-                <p className="mt-2 text-lg font-semibold break-all" style={{ color: "#fff" }}>
+                <p className="mt-2 text-base md:text-lg font-semibold break-all" style={{ color: "#fff" }}>
                   {value}
                 </p>
               </div>
@@ -104,7 +104,7 @@ export default function Contact() {
         </div>
 
         <div
-          className="mt-20 pt-8 flex flex-col md:flex-row justify-between gap-4 text-sm"
+          className="mt-14 md:mt-20 pt-6 md:pt-8 flex flex-col md:flex-row justify-between gap-3 md:gap-4 text-xs md:text-sm"
           style={{ borderTop: "1px solid #26262A", color: "#7C7C84" }}
         >
           <p>© {new Date().getFullYear()} Yashashree Rathi · Creator Media Kit</p>

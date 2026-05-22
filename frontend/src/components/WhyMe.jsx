@@ -52,8 +52,8 @@ export default function WhyMe() {
           Why I'm Different
         </p>
         <h2
-          className="font-display mt-6"
-          style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
+          className="font-display mt-5 md:mt-6"
+          style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
           data-testid="why-heading"
         >
           CREATOR OPERATOR.
@@ -61,20 +61,20 @@ export default function WhyMe() {
           NOT JUST CONTENT.
         </h2>
         <p
-          className="mt-8 max-w-2xl"
-          style={{ color: "#4F4F55", fontSize: "1.05rem", lineHeight: 1.7 }}
+          className="mt-6 md:mt-8 max-w-2xl text-sm md:text-base"
+          style={{ color: "#4F4F55", lineHeight: 1.7 }}
         >
           Most creators post about products. I integrate them into live workflows,
           document real outcomes, and teach my audience how to actually use them
           — which means your product gets discovered AND adopted.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-16">
+        <div className="grid md:grid-cols-3 gap-5 md:gap-6 mt-12 md:mt-16">
           {cards.map((c) => (
             <div
               key={c.n}
               data-testid={`why-card-${c.n}`}
-              className="card-hover bg-white rounded-2xl p-8 relative overflow-hidden"
+              className="card-hover bg-white rounded-2xl p-6 md:p-8 relative overflow-hidden"
               style={{ border: "1px solid #F0DAD3", borderTop: "3px solid var(--pink)" }}
             >
               <span
@@ -99,19 +99,19 @@ export default function WhyMe() {
         {/* Quote band */}
         <div
           data-testid="quote-band"
-          className="rounded-3xl mt-20 px-8 py-16 text-center"
+          className="rounded-3xl mt-14 md:mt-20 px-6 md:px-10 py-10 md:py-16 text-center"
           style={{ background: "var(--ink)", color: "#fff" }}
         >
           <p
             className="font-display"
-            style={{ fontSize: "clamp(1.4rem, 3.2vw, 2.3rem)", lineHeight: 1.25 }}
+            style={{ fontSize: "clamp(1.1rem, 3.2vw, 2.3rem)", lineHeight: 1.3 }}
           >
             "I'M NOT HERE TO <span style={{ color: "var(--pink)" }}>HYPE</span> YOUR PRODUCT.
             I'M HERE TO MAKE YOUR <span style={{ color: "var(--pink)" }}>IDEAL USER</span> TRUST IT."
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mt-12 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3 mt-8 md:mt-12 max-w-4xl mx-auto">
           {tags.map((t) => (
             <span key={t} className="tag-pill" data-testid={`tag-${t.replace(/\s+/g, "-").toLowerCase()}`}>
               {t}

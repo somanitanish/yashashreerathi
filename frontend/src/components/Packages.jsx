@@ -81,24 +81,24 @@ export default function Packages() {
           Partnership Tiers
         </p>
         <h2
-          className="font-display mt-6"
-          style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}
+          className="font-display mt-5 md:mt-6"
+          style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
           data-testid="packages-heading"
         >
           PICK YOUR DISTRIBUTION.
         </h2>
-        <p className="mt-8 max-w-2xl" style={{ color: "#5A5A60", fontSize: "1.05rem", lineHeight: 1.7 }}>
+        <p className="mt-6 md:mt-8 max-w-2xl text-sm md:text-base" style={{ color: "#5A5A60", lineHeight: 1.7 }}>
           All tiers include authentic integration — not ad reads. I build your
           product into a real workflow so the audience sees the value, not just
           the name.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-7 mt-16">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-7 mt-12 md:mt-16">
           {tiers.map((t) => (
             <div
               key={t.id}
               data-testid={`tier-card-${t.id}`}
-              className={`card-hover rounded-3xl p-8 relative flex flex-col bg-white`}
+              className={`card-hover rounded-3xl p-6 md:p-8 relative flex flex-col bg-white`}
               style={{
                 border: t.featured ? "2px solid var(--pink)" : "1px solid #EFE6DC",
                 boxShadow: t.featured ? "0 30px 60px -30px rgba(236,27,92,0.35)" : "none",
@@ -153,7 +153,7 @@ export default function Packages() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-3 gap-7 mt-12">
+        <div className="grid md:grid-cols-3 gap-5 md:gap-7 mt-10 md:mt-12">
           {extras.map((e) => (
             <div
               key={e.title}

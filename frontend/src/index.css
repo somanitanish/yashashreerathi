@@ -43,13 +43,18 @@ html { scroll-behavior: smooth; }
   background: var(--pink);
   color: #fff;
   border-radius: 9999px;
-  padding: 14px 28px;
+  padding: 13px 24px;
   font-weight: 700;
+  font-size: 0.95rem;
   letter-spacing: 0.01em;
   transition: transform 200ms ease, background 200ms ease, box-shadow 200ms ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .btn-pink { padding: 14px 28px; font-size: 1rem; }
 }
 .btn-pink:hover {
   background: var(--pink-dark);
@@ -61,12 +66,17 @@ html { scroll-behavior: smooth; }
   color: var(--ink);
   border: 1.5px solid #E5DED6;
   border-radius: 9999px;
-  padding: 13px 28px;
+  padding: 12px 24px;
   font-weight: 600;
+  font-size: 0.95rem;
   transition: all 200ms ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .btn-outline { padding: 13px 28px; font-size: 1rem; }
 }
 .btn-outline:hover {
   border-color: var(--ink);
@@ -84,9 +94,11 @@ html { scroll-behavior: smooth; }
 }
 .tag-pill:hover { transform: translateY(-2px); }
 
-.section-pad { padding: 96px 0; }
+.section-pad { padding: 64px 0; }
+@media (min-width: 768px) { .section-pad { padding: 96px 0; } }
 
-.container-x { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+.container-x { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+@media (min-width: 768px) { .container-x { padding: 0 28px; } }
 
 /* Hero blobs */
 .blob {
