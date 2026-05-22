@@ -50,12 +50,13 @@ export default function Contact() {
         <div className="container-x relative section-pad text-center">
           <div
             data-testid="contact-eyebrow"
-            className="inline-flex items-center gap-2 mx-auto"
+            className="inline-flex items-center gap-2.5 mx-auto mb-8 md:mb-10"
             style={{
-              background: "rgba(255,213,0,0.12)",
-              border: "1px solid rgba(255,213,0,0.35)",
+              background: "rgba(255,213,0,0.1)",
+              border: "1px solid rgba(255,213,0,0.4)",
               borderRadius: 9999,
-              padding: "8px 18px",
+              padding: "10px 22px",
+              boxShadow: "0 0 30px -8px rgba(255,213,0,0.25)",
             }}
           >
             <span
@@ -66,11 +67,12 @@ export default function Contact() {
                 borderRadius: 9999,
                 background: "var(--yellow)",
                 display: "inline-block",
-                boxShadow: "0 0 12px rgba(255,213,0,0.7)",
+                boxShadow: "0 0 10px rgba(255,213,0,0.9), 0 0 18px rgba(255,213,0,0.5)",
+                animation: "pulseDot 1.8s ease-in-out infinite",
               }}
             />
             <span
-              className="uppercase tracking-[0.22em] text-[0.7rem] md:text-xs font-bold"
+              className="uppercase tracking-[0.28em] text-[0.7rem] md:text-[0.78rem] font-bold"
               style={{ color: "var(--yellow)" }}
             >
               Let's Build Together
@@ -78,7 +80,7 @@ export default function Contact() {
           </div>
 
           <h2
-            className="font-display mt-6 md:mt-8 mx-auto"
+            className="font-display mx-auto"
             style={{ fontSize: "clamp(2rem, 9vw, 6.5rem)", lineHeight: 0.98 }}
             data-testid="contact-heading"
           >

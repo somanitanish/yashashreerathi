@@ -140,6 +140,12 @@ html { scroll-behavior: smooth; }
   border-radius: 2px;
 }
 
+/* pulsing dot */
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
+}
+
 /* progress bar */
 .bar-track { background: #f3d6dc; border-radius: 9999px; height: 8px; overflow: hidden; }
 .bar-fill { background: var(--pink); height: 100%; border-radius: 9999px; transition: width 600ms ease; }
