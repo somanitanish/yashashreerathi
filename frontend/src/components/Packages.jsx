@@ -1,5 +1,6 @@
 import React from "react";
 import { Check } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
@@ -94,16 +95,16 @@ export default function Packages() {
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 md:gap-7 mt-12 md:mt-16">
-          {tiers.map((t) => (
-            <div
-              key={t.id}
-              data-testid={`tier-card-${t.id}`}
-              className={`card-hover rounded-3xl p-6 md:p-8 relative flex flex-col bg-white`}
-              style={{
-                border: t.featured ? "2px solid var(--pink)" : "1px solid #EFE6DC",
-                boxShadow: t.featured ? "0 30px 60px -30px rgba(236,27,92,0.35)" : "none",
-              }}
-            >
+          {tiers.map((t, idx) => (
+            <Reveal key={t.id} delay={idx * 140}>
+              <div
+                data-testid={`tier-card-${t.id}`}
+                className={`card-hover rounded-3xl p-6 md:p-8 relative flex flex-col bg-white h-full`}
+                style={{
+                  border: t.featured ? "2px solid var(--pink)" : "1px solid #EFE6DC",
+                  boxShadow: t.featured ? "0 30px 60px -30px rgba(236,27,92,0.35)" : "none",
+                }}
+              >
               {t.featured && (
                 <span
                   className="absolute"
@@ -149,25 +150,27 @@ export default function Packages() {
               >
                 Get Started
               </button>
-            </div>
+              </div>
+            </Reveal>
           ))}
         </div>
 
         <div className="grid md:grid-cols-3 gap-5 md:gap-7 mt-10 md:mt-12">
-          {extras.map((e) => (
-            <div
-              key={e.title}
-              data-testid={`extras-${e.title.replace(/\s+/g, "-").toLowerCase()}`}
-              className="card-hover rounded-2xl p-7 bg-white"
-              style={{ border: "1px solid #EFE6DC" }}
-            >
-              <h4 className="font-bold text-lg">{e.title}</h4>
-              <ul className="mt-4 space-y-2">
-                {e.rows.map((r) => (
-                  <li key={r} className="text-sm" style={{ color: "#5A5A60" }}>{r}</li>
-                ))}
-              </ul>
-            </div>
+          {extras.map((e, idx) => (
+            <Reveal key={e.title} delay={idx * 120}>
+              <div
+                data-testid={`extras-${e.title.replace(/\s+/g, "-").toLowerCase()}`}
+                className="card-hover rounded-2xl p-5 md:p-7 bg-white h-full"
+                style={{ border: "1px solid #EFE6DC" }}
+              >
+                <h4 className="font-bold text-lg">{e.title}</h4>
+                <ul className="mt-4 space-y-2">
+                  {e.rows.map((r) => (
+                    <li key={r} className="text-sm" style={{ color: "#5A5A60" }}>{r}</li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

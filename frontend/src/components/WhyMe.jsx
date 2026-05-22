@@ -1,4 +1,5 @@
 import React from "react";
+import Reveal from "@/components/Reveal";
 
 const cards = [
   {
@@ -70,13 +71,13 @@ export default function WhyMe() {
         </p>
 
         <div className="grid md:grid-cols-3 gap-5 md:gap-6 mt-12 md:mt-16">
-          {cards.map((c) => (
-            <div
-              key={c.n}
-              data-testid={`why-card-${c.n}`}
-              className="card-hover bg-white rounded-2xl p-6 md:p-8 relative overflow-hidden"
-              style={{ border: "1px solid #F0DAD3", borderTop: "3px solid var(--pink)" }}
-            >
+          {cards.map((c, idx) => (
+            <Reveal key={c.n} delay={idx * 120}>
+              <div
+                data-testid={`why-card-${c.n}`}
+                className="card-hover bg-white rounded-2xl p-6 md:p-8 relative overflow-hidden h-full"
+                style={{ border: "1px solid #F0DAD3", borderTop: "3px solid var(--pink)" }}
+              >
               <span
                 className="font-display absolute right-6 top-6 select-none"
                 style={{ fontSize: "3.4rem", color: "#F1DAD3" }}
@@ -92,7 +93,8 @@ export default function WhyMe() {
               <p className="mt-4 text-sm" style={{ color: "#5A5A60", lineHeight: 1.65 }}>
                 {c.body}
               </p>
-            </div>
+              </div>
+            </Reveal>
           ))}
         </div>
 

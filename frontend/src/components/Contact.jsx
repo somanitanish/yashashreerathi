@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Instagram, Newspaper } from "lucide-react";
+import LeadForm from "@/components/LeadForm";
 
 const channels = [
   {
@@ -48,13 +49,34 @@ export default function Contact() {
         />
 
         <div className="container-x relative section-pad text-center">
-          <p
-            className="uppercase tracking-[0.22em] text-xs md:text-sm font-bold"
-            style={{ color: "var(--yellow)" }}
+          <div
             data-testid="contact-eyebrow"
+            className="inline-flex items-center gap-2 mx-auto"
+            style={{
+              background: "rgba(255,213,0,0.12)",
+              border: "1px solid rgba(255,213,0,0.35)",
+              borderRadius: 9999,
+              padding: "8px 18px",
+            }}
           >
-            Let's Build Together
-          </p>
+            <span
+              aria-hidden="true"
+              style={{
+                width: 8,
+                height: 8,
+                borderRadius: 9999,
+                background: "var(--yellow)",
+                display: "inline-block",
+                boxShadow: "0 0 12px rgba(255,213,0,0.7)",
+              }}
+            />
+            <span
+              className="uppercase tracking-[0.22em] text-[0.7rem] md:text-xs font-bold"
+              style={{ color: "var(--yellow)" }}
+            >
+              Let's Build Together
+            </span>
+          </div>
 
           <h2
             className="font-display mt-6 md:mt-8 mx-auto"
@@ -69,15 +91,20 @@ export default function Contact() {
           </h2>
 
           <p
-            className="mt-10 md:mt-14 max-w-2xl mx-auto text-sm md:text-base"
+            className="mt-8 md:mt-10 max-w-2xl mx-auto text-sm md:text-base"
             style={{ color: "#B9B9C0", lineHeight: 1.7 }}
           >
             My audience is actively building, learning, and buying. If your
             product belongs in their workflow — let's make sure they find it.
           </p>
 
+          {/* Lead-capture form */}
+          <div className="mt-10 md:mt-14">
+            <LeadForm />
+          </div>
+
           {/* Channel cards */}
-          <div className="grid sm:grid-cols-3 gap-4 md:gap-5 mt-12 md:mt-16 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-14 max-w-4xl mx-auto">
             {channels.map(({ Icon, label, value, href, testId }) => (
               <a
                 key={label}
